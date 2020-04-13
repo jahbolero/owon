@@ -1,0 +1,58 @@
+<div *ngIf="loggedIn == 0" class="page-header" filter-color="orange">
+  <div
+    class="page-header-image"
+    style="background-image: url(assets/img/login.jpg);"
+  ></div>
+  <div class="container">
+    <div class="col-md-4 content-center">
+      <div class="card card-login card-plain">
+        <form class="form" method="" action="">
+          <div class="header header-primary text-center"></div>
+          <div class="content">
+            <div
+              class="input-group form-group-no-border input-lg"
+              [ngClass]="{ 'input-group-focus': focus1 === true }"
+            >
+              <div class="input-group-prepend">
+                <span class="input-group-text"
+                  ><i class="now-ui-icons text_caps-small"></i
+                ></span>
+              </div>
+              <input
+                type="password"
+                #formValue
+                (keyup.enter)="submitPassword(formValue.value)"
+                placeholder="Password..."
+                class="form-control"
+                (focus)="focus1 = true"
+                (blur)="focus1 = false"
+              />
+            </div>
+          </div>
+          <div class="footer text-center">
+            <button
+              class="btn btn-primary btn-round btn-lg btn-block"
+              (click)="submitPassword(formValue.value)"
+            >
+              Get Started
+            </button>
+          </div>
+          <div class="pull-left">
+            <h6>
+              <a href="#pablo" class="link">Create Account</a>
+            </h6>
+          </div>
+          <div class="pull-right">
+            <h6>
+              <a href="#pablo" class="link">Need Help?</a>
+            </h6>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+  <footer class="footer"></footer>
+</div>
+<div *ngIf="loggedIn == 1">
+  <app-request-table></app-request-table>
+</div>

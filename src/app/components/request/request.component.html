@@ -1,0 +1,237 @@
+<nav class="navbar navbar-expand-lg bg-primary">
+  <div class="container">
+    <div class="navbar-translate">
+      <a class="navbar-brand" href="/index"
+        ><span class="arrows-1_minimal-left">Back</span></a
+      >
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-toggle="collapse"
+        data-target="#example-navbar-primary"
+        aria-controls="navbarSupportedContent"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <span class="navbar-toggler-bar bar1"></span>
+        <span class="navbar-toggler-bar bar2"></span>
+        <span class="navbar-toggler-bar bar3"></span>
+      </button>
+    </div>
+  </div>
+</nav>
+<div
+  class="contactus-1 section-image"
+  style="background-image: url('assets/img/contact1.jpg');"
+>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-5">
+        <h2 class="title">Free masks for all</h2>
+        <h4 class="description">
+          We are giving free masks all around the world. Once you receive the
+          mask shipment you need to give it to the people in your community. A
+          minimum of 50pcs is required for each request.
+        </h4>
+      </div>
+      <div class="col-md-5 ml-auto mr-auto">
+        <div class="card card-contact card-raised">
+          <form #requestForm="ngForm" (ngSubmit)="onSubmit(requestForm)">
+            <div class="card-header text-center">
+              <h4 class="card-title">Mask Request Form</h4>
+            </div>
+            <div class="card-body">
+              <div class="row">
+                <div class="form-group col-md-8">
+                  <label>Full Name</label>
+                  <div
+                    class="input-group"
+                    [ngClass]="{ 'input-group-focus': focus2 === true }"
+                  >
+                    <div class="input-group-prepend">
+                      <span class="input-group-text"></span>
+                    </div>
+                    <input
+                      type="text"
+                      placeholder=""
+                      class="form-control"
+                      (focus)="focus2 = true"
+                      (blur)="focus2 = false"
+                      ngModel
+                      name="name"
+                    />
+                  </div>
+                </div>
+                <div class="form-group col-md-4">
+                  <label>Quantity</label>
+                  <div
+                    class="input-group"
+                    [ngClass]="{ 'input-group-focus': focus2 === true }"
+                  >
+                    <div class="input-group-prepend">
+                      <span class="input-group-text"></span>
+                    </div>
+                    <input
+                      type="number"
+                      placeholder=""
+                      class="form-control"
+                      (focus)="focus2 = true"
+                      (blur)="focus2 = false"
+                      ngModel
+                      name="requestQty"
+                    />
+                  </div>
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label>Contact Number</label>
+                <div
+                  class="input-group"
+                  [ngClass]="{ 'input-group-focus': focus2 === true }"
+                >
+                  <div class="input-group-prepend">
+                    <span class="input-group-text"></span>
+                  </div>
+                  <input
+                    type="number"
+                    placeholder=""
+                    class="form-control"
+                    (focus)="focus2 = true"
+                    (blur)="focus2 = false"
+                    ngModel
+                    name="contactNumber"
+                  />
+                </div>
+              </div>
+              <div class="form-group">
+                <label>Email address</label>
+                <div
+                  class="input-group"
+                  [ngClass]="{ 'input-group-focus': focus2 === true }"
+                >
+                  <div class="input-group-prepend">
+                    <span class="input-group-text"></span>
+                  </div>
+                  <input
+                    type="email"
+                    placeholder=""
+                    class="form-control"
+                    (focus)="focus2 = true"
+                    (blur)="focus2 = false"
+                    ngModel
+                    name="emailAddress"
+                  />
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-md-4">
+                  <div class="form-group">
+                    <label>Country</label>
+                    <div
+                      class="input-group"
+                      [ngClass]="{ 'input-group-focus': focus2 === true }"
+                    >
+                      <div class="input-group-prepend">
+                        <span class="input-group-text"></span>
+                      </div>
+                      <input
+                        type="text"
+                        placeholder=""
+                        class="form-control"
+                        (focus)="focus2 = true"
+                        (blur)="focus2 = false"
+                        ngModel
+                        name="country"
+                      />
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-4">
+                  <div class="form-group">
+                    <label>City</label>
+                    <div
+                      class="input-group"
+                      [ngClass]="{ 'input-group-focus': focus2 === true }"
+                    >
+                      <div class="input-group-prepend">
+                        <span class="input-group-text"></span>
+                      </div>
+                      <input
+                        type="text"
+                        placeholder=""
+                        class="form-control"
+                        (focus)="focus2 = true"
+                        (blur)="focus2 = false"
+                        ngModel
+                        name="city"
+                      />
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-4">
+                  <div class="form-group">
+                    <label>Zip</label>
+                    <div
+                      class="input-group"
+                      [ngClass]="{ 'input-group-focus': focus2 === true }"
+                    >
+                      <div class="input-group-prepend">
+                        <span class="input-group-text"></span>
+                      </div>
+                      <input
+                        type="text"
+                        placeholder=""
+                        class="form-control"
+                        (focus)="focus2 = true"
+                        (blur)="focus2 = false"
+                        ngModel
+                        name="zip"
+                      />
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="form-group">
+                <label>Address Line</label>
+                <div
+                  class="input-group"
+                  [ngClass]="{ 'input-group-focus': focus2 === true }"
+                >
+                  <div class="input-group-prepend">
+                    <span class="input-group-text"></span>
+                  </div>
+                  <input
+                    type="text"
+                    placeholder=""
+                    class="form-control"
+                    (focus)="focus2 = true"
+                    (blur)="focus2 = false"
+                    ngModel
+                    name="addressLine"
+                  />
+                </div>
+              </div>
+              <div class="row">
+                <div class="ml-auto mr-auto">
+                  <button class="btn btn-primary btn-round pull-right">
+                    Send Request
+                  </button>
+                </div>
+                <div>
+                  <p *ngIf="success == 1" class="text-success">
+                    Success! We'll get back to you soon
+                  </p>
+                  <p *ngIf="success == 2" class="text-danger">
+                    Something went wrong. All fields must be filled. Please try
+                    again.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

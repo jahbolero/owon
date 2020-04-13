@@ -1,3 +1,4 @@
+<app-navbar></app-navbar>
 <div class="wrapper">
   <div class="page-header page-header-small">
     <div
@@ -9,14 +10,11 @@
       <div class="content-center">
         <h1 class="title">One World One Nation</h1>
         <div class="text-center">
-          <a href="#pablo" class="btn btn-primary btn-icon btn-round">
+          <a
+            href="https://www.facebook.com/kura.fortuna.7"
+            class="btn btn-primary btn-icon btn-round"
+          >
             <i class="fab fa-facebook-square"></i>
-          </a>
-          <a href="#pablo" class="btn btn-primary btn-icon btn-round">
-            <i class="fab fa-twitter"></i>
-          </a>
-          <a href="#pablo" class="btn btn-primary btn-icon btn-round">
-            <i class="fab fa-google-plus"></i>
           </a>
         </div>
       </div>
@@ -40,11 +38,40 @@
       <div class="separator separator-primary"></div>
     </div>
   </div>
+  <div class="section">
+    <div class="container">
+      <div class="col-md-8 ml-auto mr-auto text-center">
+        <h2 class="title">One World One Nation Impact</h2>
+      </div>
+      <div class="row">
+        <div class="col-sm-4">
+          <img src="./assets/img/don5.JPG" class="img-raised" />
+        </div>
+        <div class="col-sm-4">
+          <img src="./assets/img/don4.JPG" class="img-raised" />
+        </div>
+        <div class="col-sm-4">
+          <img src="./assets/img/don3.JPG" class="img-raised" />
+        </div>
+        <div class="col-sm-4">
+          <img src="./assets/img/don1.JPG" class="img-raised" />
+        </div>
+        <div class="col-sm-4">
+          <img src="./assets/img/don2.JPG" class="img-raised" />
+        </div>
+        <div class="col-sm-4">
+          <img src="./assets/img/don6.JPG" class="img-raised" />
+        </div>
+      </div>
+      <div class="separator separator-primary"></div>
+    </div>
+  </div>
+
   <div class="section section-team text-center">
     <div class="container">
       <h2 class="title">Time To Act</h2>
-      <div class="team">
-        <div class="row">
+      <div class="team ml-auto mr-auto">
+        <div class="row text-center ml-auto mr-auto">
           <div class="col-md-4">
             <div class="team-player">
               <div class="card" style="width: 20rem;">
@@ -54,7 +81,7 @@
                     Some quick example text to build on the card title and make
                     up the bulk of the card's content.
                   </p>
-                  <a href="#" class="btn btn-primary">Request</a>
+                  <a href="/request" class="btn btn-primary">Request</a>
                 </div>
               </div>
             </div>
@@ -63,16 +90,17 @@
             <div class="team-player">
               <div class="card" style="width: 20rem;">
                 <div class="card-body">
-                  <h4 class="card-title">Donate to the cause</h4>
+                  <h4 class="card-title">Nutrition Video</h4>
                   <p class="card-text">
                     Some quick example text to build on the card title and make
                     up the bulk of the card's content.
                   </p>
-                  <a href="#" class="btn btn-primary">Donate</a>
+                  <button class="btn btn-secondary">View Now</button>
                 </div>
               </div>
             </div>
           </div>
+
           <div class="col-md-4">
             <div class="team-player">
               <div class="card" style="width: 20rem;">
@@ -93,8 +121,15 @@
   </div>
   <div class="section section-contact-us text-center">
     <div class="container">
-      <h2 class="title">Want to work with us?</h2>
-      <p class="description">Your project is very important to us.</p>
+      <h2 class="title">Want to donate?</h2>
+      <div class="row">
+        <p class="col-lg-6 text-center col-md-8 ml-auto mr-auto">
+          We are giving free masks all over the world.If you want to support us,
+          you can send it through zelle (818-450-4074) or Venmo @sirach-fortuna.
+          Fill up the form so we can acknowledge your contributions!
+        </p>
+      </div>
+
       <div class="row">
         <div class="col-lg-6 text-center col-md-8 ml-auto mr-auto">
           <div
@@ -109,7 +144,7 @@
             <input
               type="text"
               class="form-control"
-              placeholder="Left Font Awesome Icon"
+              placeholder="First Name"
               (focus)="focus = true"
               (blur)="focus = false"
             />
@@ -126,7 +161,7 @@
             <input
               type="text"
               class="form-control"
-              placeholder="Left Font Awesome Icon"
+              placeholder="Last Name"
               (focus)="focus1 = true"
               (blur)="focus1 = false"
             />
@@ -149,41 +184,5 @@
       </div>
     </div>
   </div>
-  <footer class="footer footer-default">
-    <div class="container">
-      <nav>
-        <ul>
-          <li>
-            <a href="https://www.creative-tim.com">
-              Creative Tim
-            </a>
-          </li>
-          <li>
-            <a href="https://www.creative-tim.com/about-us">
-              About Us
-            </a>
-          </li>
-          <li>
-            <a href="http://blog.creative-tim.com">
-              Blog
-            </a>
-          </li>
-          <li>
-            <a
-              href="https://github.com/creativetimofficial/now-ui-kit/blob/master/LICENSE.md"
-            >
-              MIT License
-            </a>
-          </li>
-        </ul>
-      </nav>
-      <div class="copyright">
-        &copy;
-        {{ data | date: "yyyy" }}, Designed by
-        <a href="https://www.invisionapp.com" target="_blank">Invision</a>.
-        Coded by
-        <a href="https://www.creative-tim.com" target="_blank">Creative Tim</a>.
-      </div>
-    </div>
-  </footer>
+  <footer class="footer footer-default"></footer>
 </div>
