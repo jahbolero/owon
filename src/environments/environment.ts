@@ -5,6 +5,6 @@
 
 export const environment = {
   production: false,
-  baseUrl: "http://localhost:3000",
-  // baseUrl: "https://api-owon.herokuapp.com",
+  // baseUrl: "http://localhost:3000",
+  baseUrl: "https://api-owon.herokuapp.com",
 };
