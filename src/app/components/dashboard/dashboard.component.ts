@@ -14,8 +14,6 @@ export class DashboardComponent implements OnInit {
   ngOnInit(): void {}
 
   submitPassword(value: any) {
-    console.log("WOW");
-    console.log(value);
     if (value == "sirachfortuna") {
       this.loggedIn = 1;
       console.log(this.loggedIn);

@@ -20,4 +20,7 @@ export class DataService {
   public getOne(id: string) {
     return this.httpService.get(this.url + `/${id}`);
   }
+  public delete(id: string) {
+    return this.httpService.delete(this.url + `${id}`);
+  }
 }

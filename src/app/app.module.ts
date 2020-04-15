@@ -14,6 +14,10 @@ import { HttpClientModule } from "@angular/common/http";
 import { DashboardComponent } from "./components/dashboard/dashboard.component";
 import { RequestTableComponent } from "./components/request-table/request-table.component";
 import { VideoComponent } from "./components/video/video.component";
+import { DataTablesModule } from "angular-datatables";
+import { NgxDatatableModule } from "@swimlane/ngx-datatable";
+import { ComponentsModule } from "./components/components.module";
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -32,6 +36,9 @@ import { VideoComponent } from "./components/video/video.component";
     AppRoutingModule,
     ExamplesModule,
     HttpClientModule,
+    DataTablesModule,
+    NgxDatatableModule,
+    ComponentsModule,
   ],
   providers: [],
   bootstrap: [AppComponent],

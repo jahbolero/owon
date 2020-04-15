@@ -11,8 +11,9 @@
         <h1 class="title">One World One Nation</h1>
         <div class="text-center">
           <a
-            href="https://www.facebook.com/kura.fortuna.7"
+            href="https://www.facebook.com/One-World-One-Nation-110521437288555/"
             class="btn btn-primary btn-icon btn-round"
+            target="_blank"
           >
             <i class="fab fa-facebook-square"></i>
           </a>
@@ -105,80 +106,145 @@
             <div class="team-player">
               <div class="card" style="width: 20rem;">
                 <div class="card-body">
-                  <h4 class="card-title">Mask Swap</h4>
+                  <h4 class="card-title">Help Now</h4>
                   <p class="card-text">
-                    A mask swapping app that lets you swap/trade masks with
-                    people all over the globe.
+                    You don't need money to make an impact, we need the manpower
+                    and your skills
                   </p>
-                  <button class="btn btn-secondary">Coming soon</button>
+                  <a href="https://forms.gle/XYvavoSjsxLQMcpB9" target="_blank"
+                    ><button class="btn btn-primary">Volunteer</button></a
+                  >
                 </div>
               </div>
             </div>
           </div>
         </div>
       </div>
+      <div class="separator separator-primary"></div>
     </div>
   </div>
-  <div class="section section-contact-us text-center">
-    <div class="container">
-      <h2 class="title">Want to donate?</h2>
-      <div class="row">
-        <p class="col-lg-6 text-center col-md-8 ml-auto mr-auto">
-          We are giving free masks all over the world.If you want to support us,
-          you can send it through zelle (818-450-4074) or Venmo @sirach-fortuna.
-          Fill up the form so we can acknowledge your contributions!
-        </p>
-      </div>
 
+  <div class="section">
+    <div class="container">
       <div class="row">
-        <div class="col-lg-6 text-center col-md-8 ml-auto mr-auto">
-          <div
-            class="input-group input-lg"
-            [ngClass]="{ 'input-group-focus': focus === true }"
-          >
-            <div class="input-group-prepend">
-              <span class="input-group-text">
-                <i class="now-ui-icons users_circle-08"></i>
-              </span>
+        <div class="col-md-5 ml-auto mr-auto">
+          <h2 class="title">Want to donate?</h2>
+          <p>
+            We are giving free masks all over the world.If you want to support
+            us, you can send it through zelle (818-450-4074) or Venmo
+            @sirach-fortuna. If you just want to drop a message, feel free to do
+            so below!
+            <br />
+            <br />
+          </p>
+          <form #messageForm="ngForm" (ngSubmit)="onSubmit(messageForm)">
+            <div class="row">
+              <div>
+                <div
+                  class="input-group input-lg"
+                  [ngClass]="{ 'input-group-focus': focus === true }"
+                >
+                  <div class="input-group-prepend">
+                    <span class="input-group-text">
+                      <i class="now-ui-icons users_circle-08"></i>
+                    </span>
+                  </div>
+                  <input
+                    type="text"
+                    class="form-control"
+                    placeholder="Full Name"
+                    (focus)="focus = true"
+                    (blur)="focus = false"
+                    ngModel
+                    name="name"
+                  />
+                </div>
+                <div
+                  class="input-group input-lg"
+                  [ngClass]="{ 'input-group-focus': focus1 === true }"
+                >
+                  <div class="input-group-prepend">
+                    <span class="input-group-text">
+                      <i class="now-ui-icons ui-1_email-85"></i>
+                    </span>
+                  </div>
+                  <input
+                    type="text"
+                    class="form-control"
+                    placeholder="Email"
+                    (focus)="focus1 = true"
+                    (blur)="focus1 = false"
+                    ngModel
+                    name="emailAddress"
+                  />
+                </div>
+                <div class="textarea-container">
+                  <textarea
+                    class="form-control"
+                    name="name"
+                    rows="4"
+                    cols="80"
+                    placeholder="Type a message..."
+                    ngModel
+                    name="message"
+                  ></textarea>
+                </div>
+                <div class="send-button">
+                  <button
+                    class="btn btn-primary btn-round btn-block btn-lg"
+                    type="submit"
+                  >
+                    Send Message
+                  </button>
+                </div>
+                <div>
+                  <p *ngIf="success == 1" class="text-success">
+                    We have successfully received the request! We'll get back to
+                    you soon
+                  </p>
+                  <p *ngIf="success == 2" class="text-danger">
+                    Something went wrong. All fields must be filled. Please try
+                    again.
+                  </p>
+                </div>
+              </div>
             </div>
-            <input
-              type="text"
-              class="form-control"
-              placeholder="First Name"
-              (focus)="focus = true"
-              (blur)="focus = false"
-            />
-          </div>
-          <div
-            class="input-group input-lg"
-            [ngClass]="{ 'input-group-focus': focus1 === true }"
-          >
-            <div class="input-group-prepend">
-              <span class="input-group-text">
-                <i class="now-ui-icons ui-1_email-85"></i>
-              </span>
+          </form>
+        </div>
+        <div class="col-md-5 ml-auto mr-auto">
+          <div class="info info-horizontal">
+            <div class="icon icon-primary">
+              <i class="now-ui-icons tech_mobile"></i>
             </div>
-            <input
-              type="text"
-              class="form-control"
-              placeholder="Last Name"
-              (focus)="focus1 = true"
-              (blur)="focus1 = false"
-            />
+            <div>
+              <h4 class="info-title">Give us a ring</h4>
+              <p>
+                Sirach Fortuna<br />
+                (888) 9-01WORLD
+                <br />
+                oneworldonenation08@gmail.com <br />
+              </p>
+            </div>
           </div>
-          <div class="textarea-container">
-            <textarea
-              class="form-control"
-              name="name"
-              rows="4"
-              cols="80"
-              placeholder="Type a message..."
-            ></textarea>
-          </div>
-          <div class="send-button">
-            <a href="#pablo" class="btn btn-primary btn-round btn-block btn-lg"
-              >Send Message</a
-            >
+          <div class="info info-horizontal mt-5">
+            <div class="icon icon-primary">
+              <i class="now-ui-icons location_pin"></i>
+            </div>
+            <div>
+              <h4 class="info-title">Visit our social channels</h4>
+              <a
+                href="https://www.facebook.com/One-World-One-Nation-110521437288555/"
+                target="_blank"
+              >
+                <p>Facebook</p>
+              </a>
+              <a
+                href="https://www.youtube.com/channel/UC3H5SPMnGy74QgRiK1deE6g"
+                target="_blank"
+              >
+                <p>Youtube</p>
+              </a>
+            </div>
           </div>
         </div>
       </div>

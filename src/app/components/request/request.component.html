@@ -180,7 +180,7 @@
                         <span class="input-group-text"></span>
                       </div>
                       <input
-                        type="text"
+                        type="number"
                         placeholder=""
                         class="form-control"
                         (focus)="focus2 = true"
@@ -220,7 +220,8 @@
                 </div>
                 <div>
                   <p *ngIf="success == 1" class="text-success">
-                    Success! We'll get back to you soon
+                    We have successfully received the request! We'll get back to
+                    you soon
                   </p>
                   <p *ngIf="success == 2" class="text-danger">
                     Something went wrong. All fields must be filled. Please try

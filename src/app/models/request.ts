@@ -1,4 +1,5 @@
-export class Request {
+export class MaskRequest {
+  public _id: string;
   public name: string;
   public contactNumber: string;
   public emailAddress: string;
@@ -7,6 +8,8 @@ export class Request {
   public city: string;
   public country: string;
   public zip: Number;
+  public submitted: Date;
+  public deleted: Number;
 
   constructor(
     name?,
@@ -16,7 +19,9 @@ export class Request {
     addressLine?,
     city?,
     country?,
-    zip?
+    zip?,
+    submitted?,
+    deleted?
   ) {
     (this.name = name),
       (this.contactNumber = contactNumber),
@@ -25,6 +30,8 @@ export class Request {
       (this.addressLine = addressLine),
       (this.city = city),
       (this.country = country),
-      (this.zip = zip);
+      (this.zip = zip),
+      (this.submitted = submitted),
+      (this.deleted = deleted);
   }
 }

@@ -1,6 +1,6 @@
 import { Component, OnInit, ViewChild } from "@angular/core";
 import { FormGroup } from "@angular/forms";
-import { Request } from "../../models/request";
+import { MaskRequest } from "../../models/request";
 import { RequestService } from "app/services/request.service";
 
 @Component({
@@ -11,15 +11,15 @@ import { RequestService } from "app/services/request.service";
 export class RequestComponent implements OnInit {
   @ViewChild("requestForm") formValues;
   formStatus = "none";
+  focus2: any;
   success = 0;
   constructor(private requestService: RequestService) {}
 
   ngOnInit(): void {}
 
   onSubmit(entity: FormGroup) {
-    let request: Request;
-    request = Object.assign(new Request(), entity.value);
-    console.log(request);
+    let request: MaskRequest;
+    request = Object.assign(new MaskRequest(), entity.value);
     this.success = 2;
     let isValid = 1;
     for (var key in request) {
@@ -29,6 +29,7 @@ export class RequestComponent implements OnInit {
     }
     if (isValid) {
       this.requestService.post(request).subscribe((response) => {
+        console.log(response);
         if (response != undefined) {
           this.success = 1;
           this.formValues.resetForm();
