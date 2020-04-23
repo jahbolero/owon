@@ -5,6 +5,10 @@ import { FormGroup } from "@angular/forms";
 import { Message } from "app/models/message";
 import { MessageService } from "app/services/message.service";
 
+interface Result {
+  result: string;
+}
+
 @Component({
   selector: "app-landing",
   templateUrl: "./landing.component.html",
@@ -34,17 +38,10 @@ export class LandingComponent implements OnInit {
     this.requestService.getAll().subscribe((x) => (this.requests = x));
   }
 
-  ngOnDestroy() {
-    var body = document.getElementsByTagName("body")[0];
-    body.classList.remove("landing-page");
-    var navbar = document.getElementsByTagName("nav")[0];
-    navbar.classList.remove("navbar-transparent");
-  }
-
   onSubmit(entity: FormGroup) {
     let message: Message;
     message = Object.assign(new Message(), entity.value);
-    this.success = 2;
+    this.success = 3;
     let isValid = 1;
     for (var key in message) {
       if (message[key] === "" || message[key] === null) {
@@ -52,13 +49,22 @@ export class LandingComponent implements OnInit {
       }
     }
     if (isValid) {
-      this.messageService.post(message).subscribe((response) => {
-        console.log(response);
-        if (response != undefined) {
-          this.success = 1;
-          this.formValues.resetForm();
+      this.messageService.post(message).subscribe(
+        (response) => {
+          if (response != undefined) {
+            if (response.result == "success") {
+              this.success = 1;
+              this.formValues.resetForm();
+            } else if (response.result == "fail") {
+              this.success = 2;
+            }
+          }
+        },
+        (error) => {
+          console.log(error);
+          this.success = 2;
         }
-      });
+      );
     }
   }
 }

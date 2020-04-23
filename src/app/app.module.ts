@@ -4,7 +4,6 @@ import { FormsModule } from "@angular/forms";
 import { NgbModule } from "@ng-bootstrap/ng-bootstrap";
 import { RouterModule } from "@angular/router";
 import { AppRoutingModule } from "./app.routing";
-import { ExamplesModule } from "./examples/examples.module";
 
 import { AppComponent } from "./app.component";
 import { NavbarComponent } from "./shared/navbar/navbar.component";
@@ -17,6 +16,10 @@ import { VideoComponent } from "./components/video/video.component";
 import { DataTablesModule } from "angular-datatables";
 import { NgxDatatableModule } from "@swimlane/ngx-datatable";
 import { ComponentsModule } from "./components/components.module";
+import { PartnersComponent } from "./components/partners/partners.component";
+import { LandingComponent } from "./components/landing/landing.component";
+import { MessageTableComponent } from "./components/message-table/message-table.component";
+import { NgbdModalBasic } from "./components/modal/modal.component";
 
 @NgModule({
   declarations: [
@@ -27,6 +30,10 @@ import { ComponentsModule } from "./components/components.module";
     DashboardComponent,
     RequestTableComponent,
     VideoComponent,
+    PartnersComponent,
+    LandingComponent,
+    MessageTableComponent,
+    NgbdModalBasic,
   ],
   imports: [
     BrowserAnimationsModule,
@@ -34,7 +41,6 @@ import { ComponentsModule } from "./components/components.module";
     FormsModule,
     RouterModule,
     AppRoutingModule,
-    ExamplesModule,
     HttpClientModule,
     DataTablesModule,
     NgxDatatableModule,

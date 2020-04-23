@@ -12,7 +12,7 @@ export class DataService {
     return this.httpService.get(this.url);
   }
 
-  public post(entity: any) {
+  public post(entity: any): Observable<any> {
     console.log(entity);
     return this.httpService.post(this.url, entity);
   }
