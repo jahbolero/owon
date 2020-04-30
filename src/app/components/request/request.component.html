@@ -31,7 +31,8 @@
         <h4>
           We are giving free masks all around the world. Once you receive the
           mask shipment you need to give it to the people in your community. A
-          minimum of 50pcs is required for each request.
+          minimum of 50pcs is required for each request.(Orders for the province
+          of Cebu are now closed.)
         </h4>
       </div>
       <div class="col-md-5 ml-auto mr-auto">
@@ -229,6 +230,9 @@
                   </p>
                   <p *ngIf="success == 3" class="text-info">
                     We are submitting your request, please wait.
+                  </p>
+                  <p *ngIf="success == 4" class="text-danger">
+                    Orders for the province of Cebu are now closed.
                   </p>
                 </div>
               </div>

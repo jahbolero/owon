@@ -27,6 +27,14 @@ export class RequestComponent implements OnInit {
         isValid = 0;
       }
     }
+    if (
+      (request.zip >= 6000 && request.zip <= 6053) ||
+      request.city.toLowerCase().includes("cebu") ||
+      request.addressLine.toLowerCase().includes("cebu")
+    ) {
+      isValid = 0;
+      this.success = 4;
+    }
     if (isValid) {
       this.requestService.post(request).subscribe(
         (response) => {
