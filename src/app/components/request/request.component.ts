@@ -27,10 +27,10 @@ export class RequestComponent implements OnInit {
         isValid = 0;
       }
     }
+    console.log(request.country);
     if (
-      (request.zip >= 6000 && request.zip <= 6053) ||
-      request.city.toLowerCase().includes("cebu") ||
-      request.addressLine.toLowerCase().includes("cebu")
+      request.country.toLowerCase().includes("philippines") ||
+      request.addressLine.toLowerCase().includes("philippines")
     ) {
       isValid = 0;
       this.success = 4;

@@ -23,7 +23,9 @@
       </thead>
       <tbody *ngIf="requests?.length > 0">
         <tr *ngFor="let row of requests">
-          <td class="text-center">{{ row.submitted | date: "medium" }}</td>
+          <td class="text-center">
+            {{ row.submitted | date: "yyyy-MM-dd hh:mm:ss" }}
+          </td>
           <td class="text-center">{{ row.name }}</td>
           <td class="text-center">{{ row.contactNumber }}</td>
           <td class="text-center">{{ row.emailAddress }}</td>

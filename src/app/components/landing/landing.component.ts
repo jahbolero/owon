@@ -4,6 +4,11 @@ import { RequestService } from "app/services/request.service";
 import { FormGroup } from "@angular/forms";
 import { Message } from "app/models/message";
 import { MessageService } from "app/services/message.service";
+import {
+  NgbCarousel,
+  NgbSlideEvent,
+  NgbSlideEventSource,
+} from "@ng-bootstrap/ng-bootstrap";
 
 interface Result {
   result: string;
@@ -15,6 +20,42 @@ interface Result {
   styleUrls: ["./landing.component.scss"],
 })
 export class LandingComponent implements OnInit {
+  images = ["page1", "page2", "page3", "page4"];
+
+  paused = false;
+  unpauseOnArrow = false;
+  pauseOnIndicator = false;
+  pauseOnHover = true;
+
+  @ViewChild("carousel", { static: true }) carousel: NgbCarousel;
+
+  togglePaused() {
+    if (this.paused) {
+      this.carousel.cycle();
+    } else {
+      this.carousel.pause();
+    }
+    this.paused = !this.paused;
+  }
+
+  onSlide(slideEvent: NgbSlideEvent) {
+    if (
+      this.unpauseOnArrow &&
+      slideEvent.paused &&
+      (slideEvent.source === NgbSlideEventSource.ARROW_LEFT ||
+        slideEvent.source === NgbSlideEventSource.ARROW_RIGHT)
+    ) {
+      this.togglePaused();
+    }
+    if (
+      this.pauseOnIndicator &&
+      !slideEvent.paused &&
+      slideEvent.source === NgbSlideEventSource.INDICATOR
+    ) {
+      this.togglePaused();
+    }
+  }
+  ///
   data: Date = new Date();
   focus;
   focus1;
