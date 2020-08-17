@@ -28,11 +28,7 @@ export class RequestComponent implements OnInit {
       }
     }
     console.log(request.country);
-    if (
-      request.country.toLowerCase().includes("philippines") ||
-      request.country.toLowerCase().includes("united states") ||
-      request.addressLine.toLowerCase().includes("philippines")
-    ) {
+    if (!request.country.toLowerCase().includes("australia")) {
       isValid = 0;
       this.success = 4;
     }
