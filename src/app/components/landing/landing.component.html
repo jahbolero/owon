@@ -1,19 +1,13 @@
 <div class="wrapper">
   <div class="page-header page-header-small">
-    <div
-      class="page-header-image rellax-header"
-      data-rellax-speed="-8"
-      style="background-image: url('assets/img/landingpage.jpg')"
-    ></div>
+    <div class="page-header-image rellax-header" data-rellax-speed="-8"
+      style="background-image: url('assets/img/landingpage.jpg')"></div>
     <div class="container">
       <div class="content-center">
         <h1 class="title">One World One Nation</h1>
         <div class="text-center">
-          <a
-            href="https://www.facebook.com/One-World-One-Nation-110521437288555/"
-            class="btn btn-primary btn-icon btn-round"
-            target="_blank"
-          >
+          <a href="https://www.facebook.com/One-World-One-Nation-110521437288555/"
+            class="btn btn-primary btn-icon btn-round" target="_blank">
             <i class="fab fa-facebook-square"></i>
           </a>
         </div>
@@ -89,26 +83,14 @@
               </div>
             </ng-template>
           </ngb-carousel> -->
-          <ngb-carousel
-            #carousel
-            [interval]="1500"
-            [pauseOnHover]="pauseOnHover"
-            (slide)="onSlide($event)"
-          >
+          <ngb-carousel #carousel [interval]="1500" [pauseOnHover]="pauseOnHover" (slide)="onSlide($event)">
             <ng-template ngbSlide *ngFor="let img of images; index as i">
               <div class="carousel-caption">
                 <!-- <h3>My slide {{ i + 1 }} title</h3> -->
               </div>
-              <a
-                href="./assets/img/page/{{ img }}.jpg"
-                target="_blank"
-                rel="nofollow noopener noreferrer"
-              >
+              <a href="./assets/img/page/{{ img }}.jpg" target="_blank" rel="nofollow noopener noreferrer">
                 <div class="picsum-img-wrapper">
-                  <img
-                    src="./assets/img/page/{{ img }}.jpg"
-                    alt="My image {{ i + 1 }} description"
-                  />
+                  <img src="./assets/img/page/{{ img }}.jpg" alt="My image {{ i + 1 }} description" />
                 </div>
               </a>
             </ng-template>
@@ -131,14 +113,9 @@
   <div class="section">
     <div class="col-md-12 text-center">
       <div class="iframe-container">
-        <iframe
-          height="1000"
-          width="70%"
-          src="https://www.youtube.com/embed/WVBTZPXhWec"
-          frameborder="0"
+        <iframe height="1000" width="70%" src="https://www.youtube.com/embed/WVBTZPXhWec" frameborder="0"
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-          allowfullscreen
-        ></iframe>
+          allowfullscreen></iframe>
       </div>
     </div>
     <div class="separator separator-primary"></div>
@@ -150,15 +127,13 @@
       <div class="team ml-auto mr-auto">
         <div class="row text-center ml-auto mr-auto">
           <div class="col-md-4">
-            <div class="team-player">
+            <div>
               <div class="card" style="width: 20rem">
                 <div class="card-body">
                   <h4 class="card-title">Superhero Masks</h4>
                   <p class="card-text">
-                    We're giving away free masks to help our One World One
-                    Nation community fight against COVID-19.
+                    <img src="../../../assets/img/mission_complete.png" style="height: 140px;">
                   </p>
-                  <a href="/request" class="btn btn-primary">Request</a>
                 </div>
               </div>
             </div>
@@ -187,9 +162,8 @@
                     You don't need money to make an impact, we need the manpower
                     and your skills
                   </p>
-                  <a href="https://forms.gle/XYvavoSjsxLQMcpB9" target="_blank"
-                    ><button class="btn btn-primary">Volunteer</button></a
-                  >
+                  <a href="https://forms.gle/XYvavoSjsxLQMcpB9" target="_blank"><button
+                      class="btn btn-primary">Volunteer</button></a>
                 </div>
               </div>
             </div>
@@ -198,14 +172,11 @@
             <div class="team-player">
               <div class="card" style="width: 20rem">
                 <div class="card-body">
-                  <h4 class="card-title">Farm Heroes, The Giving Farms</h4>
+                  <h4 class="card-title">Farm Heroes</h4>
                   <p class="card-text">
-                    Partners with landowners and farmers in planting to feed the
-                    community for free by providing them with seedlings and
-                    machinery to be able to have a productive harvest with the
-                    use of organic method.
+                    Provides financial assistance to local farmers to help alleviate their current economic situation.
                   </p>
-                  <a href="" class="btn btn-block">Coming Soon</a>
+                  <a class="btn btn-block">Coming Soon</a>
                 </div>
               </div>
             </div>
@@ -216,12 +187,23 @@
                 <div class="card-body">
                   <h4 class="card-title">Backyard Heroes</h4>
                   <p class="card-text">
-                    Encourages the local communities to plant within their
-                    backyards by providing them with seedlings and soil through
-                    organic method. The community needs to provide the plant
-                    containers using recyclable materials.
+                    Encourages the local communities to plant within their backyards by providing them with free seeds
+                    and encouraging them to apply organic gardening method.
                   </p>
-                  <a href="" class="btn btn-block">Coming Soon</a>
+                  <a  class="btn btn-block">Coming Soon</a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="team-player">
+              <div class="card" style="width: 20rem">
+                <div class="card-body">
+                  <h4 class="card-title">Urban Farming</h4>
+                  <p class="card-text">
+                    Converts unused spaces and common spaces into a food forest to promote a holistic lifestyle that is eco-friendly, regenerative and sustainable.
+                  </p>
+                  <a class="btn btn-block">Coming Soon</a>
                 </div>
               </div>
             </div>
@@ -240,70 +222,37 @@
         <div class="col-md-5 ml-auto mr-auto">
           <h2 class="title">Want to donate?</h2>
           <p>
-            We are giving free masks all over the world.If you want to support
-            us, you can send it through zelle (818-450-4074) or Venmo
-            @sirach-fortuna. If you just want to drop a message, feel free to do
-            so below!
+            Please support our projects. You can send donations through zelle (818-450-4074), venmo @sirach-fortuna, paypal (sirachfortuna@gmail.com). If you just want to drop a message, feel free to do so below!
             <br />
             <br />
           </p>
           <form #messageForm="ngForm" (ngSubmit)="onSubmit(messageForm)">
             <div class="row">
               <div>
-                <div
-                  class="input-group input-lg"
-                  [ngClass]="{ 'input-group-focus': focus === true }"
-                >
+                <div class="input-group input-lg" [ngClass]="{ 'input-group-focus': focus === true }">
                   <div class="input-group-prepend">
                     <span class="input-group-text">
                       <i class="now-ui-icons users_circle-08"></i>
                     </span>
                   </div>
-                  <input
-                    type="text"
-                    class="form-control"
-                    placeholder="Full Name"
-                    (focus)="focus = true"
-                    (blur)="focus = false"
-                    ngModel
-                    name="name"
-                  />
+                  <input type="text" class="form-control" placeholder="Full Name" (focus)="focus = true"
+                    (blur)="focus = false" ngModel name="name" />
                 </div>
-                <div
-                  class="input-group input-lg"
-                  [ngClass]="{ 'input-group-focus': focus1 === true }"
-                >
+                <div class="input-group input-lg" [ngClass]="{ 'input-group-focus': focus1 === true }">
                   <div class="input-group-prepend">
                     <span class="input-group-text">
                       <i class="now-ui-icons ui-1_email-85"></i>
                     </span>
                   </div>
-                  <input
-                    type="text"
-                    class="form-control"
-                    placeholder="Email"
-                    (focus)="focus1 = true"
-                    (blur)="focus1 = false"
-                    ngModel
-                    name="emailAddress"
-                  />
+                  <input type="text" class="form-control" placeholder="Email" (focus)="focus1 = true"
+                    (blur)="focus1 = false" ngModel name="emailAddress" />
                 </div>
                 <div class="textarea-container">
-                  <textarea
-                    class="form-control"
-                    name="name"
-                    rows="4"
-                    cols="80"
-                    placeholder="Type a message..."
-                    ngModel
-                    name="message"
-                  ></textarea>
+                  <textarea class="form-control" name="name" rows="4" cols="80" placeholder="Type a message..." ngModel
+                    name="message"></textarea>
                 </div>
                 <div class="send-button">
-                  <button
-                    class="btn btn-primary btn-round btn-block btn-lg"
-                    type="submit"
-                  >
+                  <button class="btn btn-primary btn-round btn-block btn-lg" type="submit">
                     Send Message
                   </button>
                 </div>
@@ -339,16 +288,12 @@
           <div class="info info-horizontal">
             <div>
               <h4 class="info-title">Feedback on our products</h4>
-              <a
-                href="https://docs.google.com/forms/d/10246xrUHxMdixYehDsWqjcc6fskDBXPNjdykmJtLmRQ/viewform?ts=5ed1e63e"
-                target="_blank"
-              >
+              <a href="https://docs.google.com/forms/d/10246xrUHxMdixYehDsWqjcc6fskDBXPNjdykmJtLmRQ/viewform?ts=5ed1e63e"
+                target="_blank">
                 <p>Better Boost Concentrate</p>
               </a>
-              <a
-                href="https://docs.google.com/forms/d/1Rau4_hrnYzkzqz41OyFagcuTfU0EfNR-OtW3EZ-nz64/viewform?ts=5ed48641"
-                target="_blank"
-              >
+              <a href="https://docs.google.com/forms/d/1Rau4_hrnYzkzqz41OyFagcuTfU0EfNR-OtW3EZ-nz64/viewform?ts=5ed48641"
+                target="_blank">
                 <p>Face Mask</p>
               </a>
             </div>
@@ -356,16 +301,10 @@
           <div class="info info-horizontal mt-5">
             <div>
               <h4 class="info-title">Visit our social channels</h4>
-              <a
-                href="https://www.facebook.com/One-World-One-Nation-110521437288555/"
-                target="_blank"
-              >
+              <a href="https://www.facebook.com/One-World-One-Nation-110521437288555/" target="_blank">
                 <p>Facebook</p>
               </a>
-              <a
-                href="https://www.youtube.com/channel/UC3H5SPMnGy74QgRiK1deE6g"
-                target="_blank"
-              >
+              <a href="https://www.youtube.com/channel/UC3H5SPMnGy74QgRiK1deE6g" target="_blank">
                 <p>Youtube</p>
               </a>
             </div>
